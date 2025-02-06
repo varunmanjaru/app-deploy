@@ -1,0 +1,17 @@
+name: deploy-app
+
+on: 
+  push:
+    branches:
+      - feature-deploy
+  pull_request:
+    branches:
+      - feature-deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy build
+        run: echo "from feature deploy"
+
