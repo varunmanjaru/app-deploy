@@ -15,6 +15,6 @@ jobs:
 
       - name: Print Repository Variable
         env:
-          ACCESS_ID: ${{ env.ACCESS_ID }}  # Set the environment variable
-        run: echo "The ACCESS_ID is $ACCESS_ID"  # Directly access the variable
+          ACCESS_IDs: ${{ vars.ACCESS_ID }}  # Set the environment variable
+        run: echo "The ACCESS_ID is $ACCESS_IDs"  # Directly access the variable
 
