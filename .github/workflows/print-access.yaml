@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Print Repository Variable
-        run: echo "The ACCESS_ID is $ACCESS_ID"  # Prints the ACCESS_ID value
         env:
-          ACCESS_ID: ${{ env.ACCESS_ID }}  # Using environment variable
+          ACCESS_ID: ${{ env.ACCESS_ID }}  # Set the environment variable
+        run: echo "The ACCESS_ID is $ACCESS_ID"  # Directly access the variable
 
