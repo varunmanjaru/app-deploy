@@ -1,20 +1,20 @@
-name: print-access-id  # Changed the name of the workflow
+name: print-access-id  # Workflow name
 
 on:
   push:
     branches:
-      - master  # This ensures it only runs on the master branch
+      - master  # Runs only on the master branch
 
 jobs:
   printaccess:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Runs on Ubuntu-latest (must be at job level)
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # Checks out repository code
 
       - name: Print Repository Variable
         env:
-          ACCESS_IDs: ${{ vars.ACCESS_ID }}  # Set the environment variable
-        run: echo "The ACCESS_ID is $ACCESS_IDs"  # Directly access the variable
+          ACCESS_ID: ${{ vars.ACCESS_ID }}  # Fetches the repository variable
+        run: echo "The ACCESS_ID is $ACCESS_ID"
 
