@@ -3,7 +3,7 @@ name: print-access-id  # Workflow name
 on:
   push:
     branches:
-      - master  # Runs only on the master branch
+      - masters  # Runs only on the master branch
 
 jobs:
   printaccess:
