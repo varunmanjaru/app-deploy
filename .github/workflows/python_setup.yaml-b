@@ -1,4 +1,4 @@
-name: Python Setup Example
+name: Python Setup
 
 on:
   push:
